@@ -16,7 +16,7 @@ function Header(){
     
     return(
         <>
-            <nav className='flex justify-between items-center py-2 shadow-sm shadow-primaryYellow w-full'>
+            <nav className='sticky flex justify-between items-center py-2 shadow-sm shadow-primaryYellow w-full'>
                 <div className=' flex gap-2 items-center text-center'>
                     <img src={logo} alt="Hami Skills Logo" className='w-[50px] h-[50px] block' />
                     <h1 className='p-2 font-heading'>Hami MiniMarket</h1>
@@ -24,10 +24,10 @@ function Header(){
                 </div>
 
                 <ul className='list-none justify-center font-body hidden md:flex'>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Home</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Products</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">About</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Contacts</a></li>
+                    <li className='mx-4 p-2 hover:text-primaryYellow'><a href="#">Home</a></li>
+                    <li className='mx-4 p-2 hover:text-primaryYellow' ><a href="#">Products</a></li>
+                    <li className='mx-4 p-2 hover:text-primaryYellow' ><a href="#">About</a></li>
+                    <li className='mx-4 p-2 hover:text-primaryYellow' ><a href="#">Contacts</a></li>
                 </ul>
                 <div>
                     <img onClick={menuToggle} src={menu? Close : Menu} alt="Menu" className='w-8 h-8 mr-4 md:hidden' />
@@ -35,14 +35,14 @@ function Header(){
             </nav>
 
             {menu&& (
-                <div className=' flex-col justify-start items-center gap-2 flex md:hidden bg-softBlue background-blur-md' >
+                <div className=' mt-2 fixed flex-col justify-start items-center gap-4 flex md:hidden backdrop-blur-lg w-full' >
                 
-                 <ul className='list-none justify-center font-body '>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Home</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Products</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">About</a></li>
-                    <li className='mx-4 p-2 hover:bg-primaryBlue hover:rounded-md hover:text-white'><a href="#">Contacts</a></li>
-                </ul>
+                 <ul className='list-none justify-center font-body py-1 gap-2 '>
+                    <li className='mx-4 p-1 text-white active:text-primaryYellow hover:text-primaryYellow'><a href="#">Home</a></li>
+                    <li className='mx-4 p-1 text-white active:text-primaryYellow hover:text-primaryYellow'><a href="#">Products</a></li>
+                    <li className='mx-4 p-1 text-white active:text-primaryYellow hover:text-primaryYellow'><a href="#">About</a></li>
+                    <li className='mx-4 p-1 text-white active:text-primaryYellow hover:text-primaryYellow'><a href="#">Contacts</a></li>
+                </ul> 
 
             </div>
             )}

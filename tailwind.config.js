@@ -22,6 +22,13 @@ export default {
         'heading-md': '1.875rem',
         'heading-sm': '1.25rem',
       },
+
+      textColor: {
+        primaryBlue: '#3168B8',
+        primaryYellow: '#F2C521',
+        softBlue : '#8AA7B3',
+        NeautralGrey : '#C4C4C4',
+      }
     },
   },
   plugins: [],
