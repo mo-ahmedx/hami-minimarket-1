@@ -1,14 +1,52 @@
+import {useRef} from 'react';
 import './App.css'
-import Header from './components/Header';
-import Hero from './components/Hero';
+import Home from './pages/Home.jsx';
+import Header from './components/Header.jsx';
+import Products from './pages/Products.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import Footer from './components/Footer.jsx';
+
 
 function App() {
 
+    const homeRef = useRef();
+    const productsRef = useRef();
+    const aboutRef = useRef();
+    const contactRef = useRef();
+
+    const scrollTo = (ref) => {
+      ref.current.scrollIntoView({behavior : "smooth"});
+    }
 
   return (
     <>
-      <Header />
-      <Hero />
+      <Header
+      scrollTo={scrollTo}
+      refs = {{homeRef, productsRef, aboutRef, contactRef}}
+      
+      />
+      <section ref={homeRef} className='min-h-screen  pt-24'>
+
+        <Home  scrollTo = {scrollTo} productsRef = {productsRef} contactRef = {contactRef}/>
+
+      </section>
+
+      <section ref={productsRef} className='min-h-screen '>
+        <Header
+      scrollTo={scrollTo}
+      refs = {{homeRef, productsRef, aboutRef, contactRef}}
+      
+      />
+        <Products />
+      </section>
+      <section ref={aboutRef} className='min-h-screen '>
+        <About />
+      </section>
+      <section ref={contactRef} className='min-h-screen '>
+        <Contact scrollTo={scrollTo} homeRef={homeRef} />
+      </section>
+      <Footer />
     </>
   )
 }
