@@ -24,6 +24,5 @@ I also used **React** to improve my understanding of **useState** and **useRef**
    ```
 4. Follow the link generated in the terminal
 
-## 🔗 Live Demo
 
 **🔗[Live Demo](https://hamimarket.moahmed.xyz)**
