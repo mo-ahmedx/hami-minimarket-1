@@ -2,7 +2,7 @@ import Img from '../assets/hero-bg.png';
 import {useState} from 'react'
 import UP from '../assets/up-arrow.png';
 
-function Contact({ scrollTo, homeRef }) {
+function Contact() {
         const [name, setName] = useState("");
         const [email, setEmail] = useState("");
         const [message, setMessage] = useState("");
@@ -64,9 +64,7 @@ function Contact({ scrollTo, homeRef }) {
                     <button onClick={handleSubmit} className=' font-body p-3 mt-1 bg-primaryBlue rounded-lg text-white hover:bg-primaryYellow hover:text-black transition self-center w-full'>Send Message</button>
                 </div>
             </div>
-            <div>
-                <img src={UP} onClick={() => scrollTo(homeRef)} alt="" className='w-16 self-end ml-auto mr-8 mt-10 z-50 animate-bounce' />
-            </div>
+            
         </>
     );
 }
