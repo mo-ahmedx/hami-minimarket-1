@@ -6,6 +6,7 @@ import Products from './pages/Products.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import Back from './components/Back.jsx';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <section ref={contactRef} className='min-h-screen '>
         <Contact scrollTo={scrollTo} homeRef={homeRef} />
       </section>
+      <Back scrollTo={scrollTo} homeRef={homeRef} />
       <Footer />
     </>
   )
